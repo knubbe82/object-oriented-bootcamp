@@ -1,0 +1,23 @@
+<?php 
+
+class Task
+{
+    public $title;
+    public $description;
+    public $completed = false;
+
+    public function __construct($title, $description)
+    {
+        $this->title = $title;
+        $this->description = $description;
+    }
+
+    public function complete()
+    {
+        $this->completed = true;
+    }
+}
+
+$task = new Task('Learn OOP', 'Laracast is the best online courses for php OOP');
+$task->complete();
+var_dump($task);
